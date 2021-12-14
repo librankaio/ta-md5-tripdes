@@ -50,7 +50,7 @@
                         <div class="py-2"></div>
                         <hr>
                         <div class="login-form pt-2">
-                            Don't have an account?<a href="{{ 'register' }}">Register Here</a>
+                            {{-- Don't have an account?<a href="{{ 'register' }}">Register Here</a> --}}
                         </div>
                     </div>
                     </div>
