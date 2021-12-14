@@ -10,7 +10,7 @@ class Datamd5Controller extends Controller
     public function index(){
         
         $karyawans = Karyawan::where('stats','=',1)->get();
-        return view('main.Datamd5',[
+        return view('main.datamd5',[
             'karyawans' => $karyawans,
         ]);
     }
