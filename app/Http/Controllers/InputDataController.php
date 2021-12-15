@@ -13,7 +13,7 @@ class InputDataController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->all());
+        // dd($request->all());
         $start = microtime(true);
         $request->validate([
             'nama' => ['required', 'string'],
