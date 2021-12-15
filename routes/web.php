@@ -38,8 +38,8 @@ Route::group(['middleware' => ['auth']], function(){
     
     //Input Data md5
     Route::get('inputdata', [InputDataController::class, 'index'])->name('inputdata');
-    Route::post('inputdatamd5', [InputDataController::class, 'store'])->name('inputdatamd5');
-    Route::post('{inputdata}', [InputDataController::class, 'encryptIt'])->name('inputdata');
+    Route::post('inputdatamd5', [InputDataController::class, 'store'])->name('inputdata');
+    // Route::post('{inputdata}', [InputDataController::class, 'encryptIt'])->name('inputdata');
     //Daftar md5
     Route::get('{karyawans}', [Datamd5Controller::class, 'index'])->name('datamd');
     

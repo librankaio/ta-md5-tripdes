@@ -8,7 +8,7 @@
 {{-- END Title Form --}}
 
 {{-- Form --}}
-<form action="{{ 'inputdatamd5' }}" method="get" class="container-fluid px-5 py-2">
+<form action="{{ 'inputdatamd5' }}" method="post" class="container-fluid px-5 py-2">
     <div class="head-form">
         <div class="row">                
                 <div class="container col-md-4 bg-white px-4 pt-4 pb-4"
