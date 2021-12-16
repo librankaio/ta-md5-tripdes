@@ -6,7 +6,9 @@
     <div class="px-3 bg-white"><h5 class="py-2 text-decoration-underline" style="color: #00235D">TripleDES</h5></div>
 </div>
 {{-- END Title Form --}}
-
+<div class="container-fluid px-4 py-2">
+    @include('layouts.flash-message')
+</div>
 {{-- Form --}}
 <form action="{{ route('inputdatatrd') }}" method="post" class="container-fluid px-5 py-2">
     <div class="head-form">

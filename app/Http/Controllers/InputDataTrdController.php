@@ -47,7 +47,8 @@ class InputDataTrdController extends Controller
             'stats' => $request->stats,
         ]);
         $end = microtime(true);
-        echo round($end-$start,2)."Seconds";
+        $waktu = round($end-$start,4)."MiliSeconds";
+        return redirect('inputdatatrd')->with('success','Data Berhasil Di Inputkan selama',$waktu);
     }
 
     public static function tripDesEncrypt( $q ) {
