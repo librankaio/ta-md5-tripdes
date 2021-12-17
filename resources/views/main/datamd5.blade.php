@@ -58,7 +58,7 @@
             </tr>
             @endforeach
             @php $end = microtime(true); 
-            echo round($end-$start,2)."Seconds";
+            echo round($end-$start,5)."MiliSeconds";
             @endphp
             {{-- <tr>
               <th scope="row">2</th>
