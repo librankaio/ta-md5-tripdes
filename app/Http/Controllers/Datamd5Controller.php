@@ -9,7 +9,7 @@ class Datamd5Controller extends Controller
 {
     public function index(){
         
-        $karyawans = Karyawan::where('stats','=',1)->get();
+        $karyawans = Karyawan::where('stats','=',1)->paginate(10);
         return view('main.datamd5',[
             'karyawans' => $karyawans,
         ]);

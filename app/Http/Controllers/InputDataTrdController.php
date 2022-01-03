@@ -13,7 +13,7 @@ class InputDataTrdController extends Controller
     }
 
     public function show(){
-        $datas = Karyawantrd::all();
+        $datas = Karyawantrd::paginate(10);
         return view('maintrd.datatrd',[
             'datas' => $datas,
         ]);
@@ -47,8 +47,8 @@ class InputDataTrdController extends Controller
             'stats' => $request->stats,
         ]);
         $end = microtime(true);
-        $waktu = round($end-$start,4)."MiliSeconds";
-        return redirect('inputdatatrd')->with('success','Data Berhasil Di Inputkan selama',$waktu);
+        echo round($end-$start,5)."MiliSeconds";
+        // return redirect('inputdatatrd')->with('success','Data Berhasil Di Inputkan selama',$waktu);
     }
 
     public static function tripDesEncrypt( $q ) {

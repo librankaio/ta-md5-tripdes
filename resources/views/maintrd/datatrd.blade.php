@@ -46,19 +46,24 @@
             <tr>
                  
                 <th scope="row" class="border-2">{{ $no }}</th>
-                <td class="border-2">{{ $data['nama'] }}</td>
+                {{-- <td class="border-2">{{ $data['nama'] }}</td> --}}
+                <td class="border-2">{{ $data->nama }}</td>
                 <td class="border-2">{{ App\Http\Controllers\InputDataTrdController::tripDesDecrypt($data->nik) }}</td>
                 <td class="border-2">{{ App\Http\Controllers\InputDataTrdController::tripDesDecrypt($data->npwp) }}</td>
-                <td class="border-2">{{ $data['jbtn'] }}</td>
+                {{-- <td class="border-2">{{ $data['jbtn'] }}</td> --}}
+                <td class="border-2">{{ $data->jbtn }}</td>
                 <td class="border-2">{{ App\Http\Controllers\InputDataTrdController::tripDesDecrypt($data->alamat) }}</td>
-                <td class="border-2">{{ $data['tgngn'] }}</td>
-                <td class="border-2">{{ $data['penghasilan'] }}</td>
-                <td class="border-2">{{ $data['pajakhasil'] }}</td>
+                {{-- <td class="border-2">{{ $data['tgngn'] }}</td> --}}
+                <td class="border-2">{{ $data->tgngn }}</td>
+                {{-- <td class="border-2">{{ $data['penghasilan'] }}</td> --}}
+                <td class="border-2">{{ $data->penghasilan }}</td>
+                {{-- <td class="border-2">{{ $data['pajakhasil'] }}</td> --}}
+                <td class="border-2">{{ $data->pajakhasil }}</td>
                 
             </tr>
             @endforeach
             @php $end = microtime(true); 
-            echo round($end-$start,5)."MiliSeconds";
+            // echo round($end-$start,5)."MiliSeconds";
             @endphp
             {{-- <tr>
               <th scope="row">2</th>
@@ -86,17 +91,17 @@
           <div class="col-md-6 py-3">
             <div class="d-flex justify-content-start">
               Showing
-              {{-- {{ $data_pengeluaran->firstItem() }} --}}
+              {{ $datas->firstItem() }}
               to
-              {{-- {{ $data_pengeluaran->lastItem() }} --}}
+              {{ $datas->lastItem() }}
               of
-              {{-- {{ $data_pengeluaran->total() }} --}}
+              {{ $datas->total() }}
               Entries
             </div>
           </div>
           <div class="col-md-6">
             <div class="d-flex justify-content-end">
-              {{-- {{ $data_pengeluaran->links() }} --}}
+              {{ $datas->links() }}
             </div>
           </div>
         </div>
