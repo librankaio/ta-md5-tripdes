@@ -46,7 +46,8 @@ class InputDataController extends Controller
             'stats' => $request->stats
         ]);
         $end = microtime(true);
-        echo round($end-$start,5)." MiliSeconds";
+        // echo round($end-$start,5)." MiliSeconds";
+        $waktu =  round($end-$start,5)." MiliSeconds";
         return redirect('inputdata')->with('success','Data Berhasil Di Inputkan selama',$waktu);
     }
 

@@ -47,7 +47,7 @@ class InputDataTrdController extends Controller
             'stats' => $request->stats,
         ]);
         $end = microtime(true);
-        echo round($end-$start,5)."MiliSeconds";
+        $waktu = round($end-$start,5)."MiliSeconds";
         return redirect('inputdatatrd')->with('success','Data Berhasil Di Inputkan selama',$waktu);
     }
 
